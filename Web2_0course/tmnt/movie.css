@@ -1,0 +1,118 @@
+body {
+	background-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/2/background.png);
+	background-repeat: repeat;
+	font-size: 8pt;
+	font-family: Verdana, Tahoma, sans-serif;
+}
+
+#top {
+	background-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/2/bannerbackground.png);
+	background-repeat: repeat-x;
+}
+
+#top img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+
+#content {
+	width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid gray;
+    overflow: hidden;
+}
+
+#left {
+	float: left;
+	width: 550px;
+}
+
+#overall {
+	background-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/2/rottenbackground.png);
+	background-repeat: repeat-x;
+}
+
+#overall_rating {
+	color: white;
+	vertical-align: 15px;
+}
+
+#proportion {
+	font-size: 48pt;
+	color: red;
+	font-weight: bold;
+}
+
+#left_column, #right_column {
+	width: 47%;
+	float: left;
+	margin-left: 2%;
+}
+
+.quote {
+	font-weight: bold;
+	background-color: #E1D697;
+	border: 2px solid gray;
+	padding: 8px;
+	overflow: auto;
+}
+
+.quote img {
+	float: left;
+	margin-right: 5px;
+}
+
+.quoter {
+	font-style: italic;
+	overflow: auto;
+}
+
+.review {
+	margin-bottom: 3em;
+}
+
+.quoter img {
+	float: left;
+	margin-right: 5px;
+	vertical-align: top;
+}
+
+#right {
+	float: right;
+	width: 250px;
+	background-color: #A2B964;
+	font-family: Arial, sans-serif;
+}
+
+dl {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+#footer {
+	clear: both;
+	text-align: center;
+	background-color: #A2B964;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#validators{
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+}
