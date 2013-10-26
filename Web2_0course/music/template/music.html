@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Music Viewer</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="{{ static_url("css/viewer.css") }}" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="content">
+
+    <div id="header">
+      <h1>190M Music Playlist Viewer</h1>
+      <h2>Search Through Your Playlists and Music</h2>
+    </div>
+
+    <div id="list-area">
+      <ul id="music-list">
+        {% for item in files %}
+          {% if item.filetype == 'mp3' %}
+            <li class="mp3-item">
+              <a href="{{ static_url("songs") }}/{{item.name}}") }}">{{ item.name }}</a>
+              <span class="mp3-size">{{ item.size }} b<span>
+            </li>
+          {% end %}
+          {% if item.filetype == 'txt' %}
+          <li class="playlist-item">
+            <a href="?playlist={{ item.name }}">
+              {{ item.name }}
+            </a>
+          </li>
+          {% end %}
+        {% end %}
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
