@@ -40,8 +40,8 @@ h2 {
 }
 
 #music-list li {
-  border-bottom: 2px dotted #DDD;
-  line-height: 2em;
+  border-bottom: 1px solid #DDD;
+  line-height: 3em;
 }
 
 .mp3-size {
