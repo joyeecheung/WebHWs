@@ -10,9 +10,14 @@ define("port", default=8888, help="run on the given port", type=int)
 
 class item:
   def __init__(self, name, filetype, size):
-    self.name = name;
+    self.name = name
     self.filetype = filetype;
-    self.size = size;
+    if size < 1024:
+      self.size = "%d b" % size
+    elif size < 1024 * 1024:
+      self.size = "%d kb" % (size/1024)
+    else:
+      self.size = "%d mb" % (size/(1024*1024))
 
 class IndexHandler(tornado.web.RequestHandler):
   def get(self):
