@@ -1,0 +1,128 @@
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 0;
+	color: #FFF;
+}
+
+h1 {
+	color: #51739D;
+	font-size: 28px;
+	line-height: 1em;
+	margin: 0 auto;
+	padding: 10px 15%;
+    text-indent: 0.2em;
+	min-width: 800px;
+}
+
+h1 strong {
+	font-size: 77px;
+	font-weight: bold;
+	line-height: 0.75em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#content {
+	margin: 0 auto;
+	padding: 10px 15%;
+	background-color: #51739D;
+	min-width: 800px;
+    min-height: 350px;
+	overflow: hidden;
+}
+
+#description {
+	width: 55%;
+	float: right;
+	text-align: right;
+	margin-top: 5%;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 90px;
+	line-height: 0.8em;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+#info {
+	float: left;
+	width: 40%;
+	padding: 10px 10px 30px 10px;
+}
+
+select, input {
+	width: 300px;
+	border-radius: 5px;
+	border-color: #FFF;
+	font-size: 18px;
+	color: #777;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin-bottom: 5px;
+	height: 25px;
+}
+
+input.radio {
+	width: 30px;
+	vertical-align: middle;
+}
+
+dt {
+	font-weight: bold;
+	font-size: 24px;
+	margin-top: 20px;
+}
+
+input#submit {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #51739D;
+    color: #FFFFFF;
+    text-shadow: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0 10% 20px 10%;
+    height: 50px;
+}
+
+#submit:link {
+    border-style: none;
+}
+
+#submit:active {
+    border-style: inset;
+}
+
+.error-message {
+    font-size: 20px;
+    margin: 50px 0 30px 40px;
+}
+
+.error-message a {
+    text-decoration: none;
+    color: #51739D;
+    background-color: #FFF;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+h2.error-title {
+    text-transform: uppercase;
+    font-size: 60px;
+    margin: 30px 0 0 20px;
+    padding: 0;
+    color: #fff;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+pre {
+    margin-left: 20px;
+}

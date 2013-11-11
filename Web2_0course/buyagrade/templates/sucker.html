@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/css/buyagrade.css" type="text/css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <div id="description">
+            <p>Your information has been recorded.</p>
+            <h2 >Thanks, sucker!</h2>
+        </div>
+        <div id="info">
+            <dl>
+                <dt>Name</dt>
+                <dd>
+                    {{ current['name'] }}
+                </dd>
+
+                <dt>Section</dt>
+                <dd>
+                    {{ current['section'] }}
+                </dd>
+                
+                <dt>Credit Card</dt>
+                <dd>
+                    {{ current['card'] }}({{ current['card_type'] }})
+                </dd>
+            </dl>
+        <h3>Here are all the suckers who have submitted here:</p>
+        <pre>{{ suckers }}</pre>
+        </div>
+    </div>
+</body>
+</html>

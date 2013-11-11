@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="content">
+	<div id="description">
+		<p>
+			The rough economy, along with recent changes in Sun Yat-sen University policy, now allow us to offer grades for money.  That's right!  All you need to get a 4.0 in this course is cold, hard, cash.
+		</p>
+		
+		<h2>Give Us Your Money</h2>				
+	</div>
+
+	<div id="info">
+		<form method="post">
+			<dl>
+				<dt>Name</dt>
+				<dd>
+					<input type="text" name="name" size="30", id="name">
+				</dd>
+
+				<dt>Section</dt>
+				<dd>
+					<select name="section" id="section">
+						<option value="default" disabled selected>(Select a section)</option>
+						<option value="MA">MA</option>
+						<option value="MC">MC</option>
+						<option value="MF">MF</option>
+						<option value="MH">MH</option>
+					</select>
+				</dd>
+				
+				<dt>Credit Card</dt>
+				<dd>
+					<input type="text" name="card" size="30", id="card">
+					<br>
+					<label>
+						<input type="radio" name="card_type" value="visa" class="radio"/>
+							Visa
+					</label>
+					<label>
+						<input type="radio" name="card_type" value="mastercard" class="radio"/>
+							MasterCard
+					</label>
+				</dd>
+			</dl>
+
+			<input id="submit" type="submit" value="I am a giant sucker." />
+		</form>
+	</div>
+</div>
+{% end %}
