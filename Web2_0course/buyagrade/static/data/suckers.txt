@@ -2,3 +2,5 @@ Ryan;MA;4111111111111111;visa
 Kevin W;MC;4408041254369873;visa
 Kimberly Todd;MF;5105105105105100;mastercard
 Marty Stepp;MH;5555555555554444;mastercard
+Fiona;MA;4012888888881881;visa
+Sean;MH;5114-7620-7176-0497;mastercard
