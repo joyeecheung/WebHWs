@@ -34,7 +34,7 @@ class MainHandler(tornado.web.RequestHandler):
             current = dict()
             current['name'] = name
             current['section'] = section
-            current['card'] = card
+            current['card'] = card.replace('-', '')
             current['card_type'] = card_type
 
             f = open(os.path.join(os.path.dirname(__file__),
