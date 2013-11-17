@@ -1,0 +1,18 @@
+{% for review in review_items %}
+    <div class="review">
+        <p class="quote">
+        {% if review.rating == 'FRESH' %}
+            <img src="{{ static_url("img/fresh.gif") }}" alt="Fresh" />
+        {% else %}
+            <img src="{{ static_url("img/rotten.gif") }}" alt="Rotten" />
+        {% end %}
+            <q>{{ review.quote }}</q>
+        </p>
+
+        <p class="reviewer">
+            <img src="{{ static_url("img/critic.gif") }}" alt="Critic" />
+            {{ review.reviewer }}<br />
+            <span class="company">{{ review.company }}</span>
+        </p>
+    </div>
+{% end %}
