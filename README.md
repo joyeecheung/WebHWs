@@ -5,4 +5,4 @@ Homework for learning web programing, including assignments from MIAC & Web 2.0 
 
 Opened for reference, not for *plagiarism*.
 
-Contact: <joyeec9h3@gmail.com>
+Related blogs are collated on <http://www.cnblogs.com/joyeecheung/>
