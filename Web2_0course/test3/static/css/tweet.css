@@ -1,0 +1,57 @@
+body {
+	font-family: Verdana, Tahoma, sans-serif;
+}
+
+#user-info {
+	width: 40%;
+	float: left;
+}
+
+#user-info-content {
+	float: right;
+}
+
+#tweets {
+	width: 60%;
+	float: left;
+}
+
+.tweet {
+    font-weight: bold;
+    background-color: #E1D697;
+    border: 2px solid gray;
+    padding: 8px;
+    width: 750px;
+    margin: 10px;
+}
+
+.time {
+	display: block;
+	font-weight: normal;
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+#img-area {
+    position: relative;
+    overflow: hidden;
+}
+
+#avatar {
+    display: block;
+}
+
+#tip {
+    position: absolute;
+    display: none;
+    width: 100px;
+    height: 50px;
+    z-index: 100;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    top: 0;
+    left:0;
+}

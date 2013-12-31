@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ user }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ static_url("css/tweet.css") }}" title="style" />
+</head>
+
+<body>
+    <div id="user-info">
+        <div id="user-info-content">
+            <div id="img-area"><img src="{{ info.image }}" alt="user avatar" id="avatar">
+            <div id="tip">hahhaa</div>
+            </div>
+            <dl>
+                <dt>NAME</dt>
+                <dd>{{ info.name }}</dd>
+                <dt>E-MAIL</dt>
+                <dd>{{ info.email }}</dd>
+                <dt>AGE</dt>
+                <dd>{{ info.age }}</dd>
+            </dl>
+        </div>
+    </div>
+    
+    <div id="tweets">
+        <div id="tweetList">
+            {% for tweet in tweets %}
+            <div class="tweet">
+                <p class="content">
+                    {{ tweet['content'] }}
+                </p>
+                <span class="time">
+                    {{ tweet['time'] }}
+                </span>
+            </div>
+            {% end %}
+        </div>
+
+        <form>
+            <textarea name="content" id="tweet-content"></textarea>
+            <input type="button" value="submitTweet" id="submitTweet">
+        </form>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{{ static_url("js/tweet.js") }}"></script>
+</body>
+</html>
