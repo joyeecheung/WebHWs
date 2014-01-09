@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Map</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <style>
+            html,body,#map-canvas {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"> </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
+        <script>
+            var map;
+            function initialize() {
+                var mapOptions = {
+                    zoom : 12,
+                    //center : new google.maps.LatLng(-34.397, 150.644),
+                    center : new google.maps.LatLng(22.61667,114.06667),  //深圳
+                    mapTypeId : google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById('map-canvas'),
+                        mapOptions);
+                
+                request_trace(map, '');
+            }
+            
+            function request_trace(map, car_id) {
+                var car_symb = {
+                          path: 'M 0,0 0,15 3,15 0,20 -3,15 0,15',
+                          fillColor: 'blue',
+                          fillOpacity: 0.8,
+                          scale: 1,
+                          rotation: 180,
+                          strokeColor: 'blue',
+                          strokeWeight: 1
+                        };
+                
+                new Ajax.Request('/taxi/services/trace?jsoncallback=?', {
+                    method:'get',
+                    onComplete: function(transport) {
+                        var data = transport.responseText.substring(2, transport.responseText.length-1).evalJSON();
+                        data.each(function(gpsdata){
+                            symb = Object.extend({}, car_symb);
+                            if (gpsdata.Opertaion_status == 0) { 
+                                symb.strokeColor = 'red'; 
+                                symb.fillColor = 'red';
+                            }
+                            symb.rotation = gpsdata.Azimuth * 22.5 + 180;
+                            symb.scale = gpsdata.speed / 40;
+                            symb.strokeWeight = symb.scale;
+                            
+                            var marker = new google.maps.Marker({
+                                position: new google.maps.LatLng( gpsdata.Latitude , gpsdata.Longitude ),
+                                map: map,
+                                icon: symb,
+                                title: gpsdata.Phone + ' ' + gpsdata.Time
+                            });                      
+                    });
+                }});
+            }
+            
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+    <body>
+        <div id="map-canvas"></div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ blog.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ static_url("css/blog.css") }}" title="style" />
+</head>
+
+<body>
+<div id="content">
+    <h1>{{ blog.title }}</h1>
+    <h2>{{ blog.detail}}</h2>
+    <p>
+    {% autoescape None %}
+    {{blog.content}}
+    </p>
+
+    <h2>评论</h2>
+    <input id="getCommentBtn" type="button" value="Get Comments">
+    <div id="commentsList"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
+<script src="{{ static_url("js/comment.js") }}"></script>
+</body>
+
+</html>
