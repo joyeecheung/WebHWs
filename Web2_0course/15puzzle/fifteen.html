@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fifteen Puzzle</title>
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="fifteen.css" />
+        <link rel="shortcut icon" type="image/gif" href="fifteen.gif" />
+
+        <script src="fifteen.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <h1>CSE 190 M Fifteen Puzzle</h1>
+
+        <p class="explanation">
+            The goal of the fifteen puzzle is to un-jumble its fifteen squares by repeatedly making moves that slide squares into the empty space.  How quickly can you solve it?
+        </p>
+
+        <div id="overall">
+            <div id="puzzlearea">
+                <!-- the following are the fifteen puzzle pieces -->
+                <div class="puzzlepiece">1</div>  <div class="puzzlepiece">2</div>  <div class="puzzlepiece">3</div>  <div class="puzzlepiece">4</div>
+                <div class="puzzlepiece">5</div>  <div class="puzzlepiece">6</div>  <div class="puzzlepiece">7</div>  <div class="puzzlepiece">8</div>
+                <div class="puzzlepiece">9</div>  <div class="puzzlepiece">10</div> <div class="puzzlepiece">11</div> <div class="puzzlepiece">12</div>
+                <div class="puzzlepiece">13</div> <div class="puzzlepiece">14</div> <div class="puzzlepiece">15</div>
+            </div>
+
+            <div id="controls">
+            <button id="shufflebutton">Shuffle</button>
+            <select id="select-background">
+                <option value="background.jpg">Lama</option>
+                <option value="billd.jpg">Billd</option>
+                <option value="luoxiaohei.jpg">Luo Xioahei</option>
+                <option value="Seurat.jpg">Seurat</option>
+            </select>
+            </div>
+        </div>
+        
+        <p class="explanation">
+            American puzzle author and mathematician Sam Loyd is often falsely credited with creating the puzzle; indeed, Loyd claimed from 1891 until his death in 1911 that he invented it.  The puzzle was actually created around 1874 by Noyes Palmer Chapman, a postmaster in Canastota, New York.
+        </p>
+
+        <div id="w3c">
+            <a href="http://validator.w3.org/check/referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/images/w3c-xhtml.png" alt="Valid XHTML 1.1" /></a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/images/w3c-css.png" alt="Valid CSS" /></a>
+            <a href="http://webster.cs.washington.edu/jslint/"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/images/jslint.png" alt="JavaScript Lint" /></a>
+        </div>
+    </body>
+</html>
