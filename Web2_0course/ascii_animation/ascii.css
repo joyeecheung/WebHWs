@@ -1,0 +1,81 @@
+a img {
+    border: 0;
+}
+
+body, html {
+    background-color: #CCCCFF;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+body, button, select, option, input, label {
+    font-family: sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+div {
+    text-align: center;
+}
+
+/* gallery of other students' asciimations */
+#gallery {
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0em;
+    padding: 0px;
+    text-align: center;
+}
+
+#votes {
+    position: absolute;
+    left: 100px;
+    top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#w3c {
+    margin-top: 0.5em;
+    text-align: right;
+}
+
+#displayarea {
+    border: 0px;
+    font-weight: bold;
+    height: 400px;
+    width: 90%;
+}
+
+fieldset {
+    display: inline;
+    border: 5px solid black;
+}
+
+legend{
+        text-align: left;
+}
+
+#validater{
+        text-align: right;
+}
+
+.smallFont{
+    font-size: 7pt;
+}
+
+.mediumFont{
+    font-size: 12pt;
+}
+
+.largeFont{
+    font-size: 24pt;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ blog.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ static_url("css/blog.css") }}" title="style" />
+</head>
+
+<body>
+    <div id="content">
+        <h1>{{ blog.title }}</h1>
+        <h2>{% raw blog.detail %}</h2>
+        <p> {% raw blog.content %} </p>
+    </div>
+    
+    <h2>评论</h2>
+    <input id="getCommentBtn" type="button" value="Get Comments">
+    <div id="commentsList"></div>
+
+    {% if current_user %}
+    <form method="post">
+        <span id="comment-name"> {{ user }} </span>
+        <textarea name="content" id="comment-content"></textarea>
+        <input type="submit" value="提交" id="submit">
+        <a href="/logout">logout</a>
+    </form>
+    {% end %}
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{{ static_url("js/comment.js") }}"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <!-- CSE 190 M, Spring 2009, Homework 5: ASCIImation -->
+    <head>
+        <title>ASCIImation</title>                  
+        <link rel="shortcut icon" href="stickman.gif" />
+        <link href="ascii.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <h1>CSE 190 M ASCII Animation Viewer</h1>
+        <div id="display">
+            <textarea id="displayarea" rows="20" cols="80"></textarea>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Play Controls:</legend>
+                    <button id="btnStart">Start</button>
+                    <button id="btnStop">Stop</button>
+            </fieldset>
+            <fieldset>
+                <legend>Animation:</legend>
+                <select id="selectAnimation">
+                    <option value="Blank">Blank</option>
+                    <option value="Exercise">Exercise</option>
+                    <option value="Juggler">Juggler</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Dive">Dive</option>
+                    <option value="Custom">Custom</option>  
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Size:</legend>
+                <input type="radio" name="size" value="small" checked />Small
+                <input type="radio" name="size" value="medium" />Medium
+                <input type="radio" name="size" value="large" />Large
+            </fieldset>
+            <fieldset>
+                <legend>Speed:</legend>
+                <input type="checkbox" name="speed" value="turbo" id="speed"/>Turbo
+            </fieldset>
+        </div>
+        
+        <div id="validater">
+            <a href="http://validator.w3.org/check/referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/5/w3c-xhtml.png" alt="Valid XHTML 1.1" /></a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/5/w3c-css.png" alt="Valid CSS" /></a>
+            <a href="https://webster.cs.washington.edu/jslint/?referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/5/jslint.png" alt="JavaScript Lint" /></a>
+        </div>
+        <script src="Animation.js" type="text/javascript"></script>
+        <script src="ascii.js"></script>
+    </body>
+</html>
